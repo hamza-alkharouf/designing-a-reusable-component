@@ -4,7 +4,7 @@ import threading
 class Job:
     def __init__(self):
         self.job='null'
-    def setData(self,job):
+    def setJob(self,job):
         self.job =job
 class counter():
     def __init__(self,limit ,active):
@@ -30,7 +30,7 @@ def task():
 
 def thread(args):
     threadCount.setLimit(args['session'])
-    job.setData(args['job'])
+    job.setJob(args['job'])
 
 
     if (threadCount.limit < threadCount.active):
